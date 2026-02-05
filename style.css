@@ -12,18 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom Cursor */
-.cursor {
-  width: 18px;
-  height: 18px;
-  border: 2px solid #b026ff;
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: 0.1s ease;
-  z-index: 999;
-}
+
 
 /* Hero Section */
 .hero {
@@ -34,7 +23,37 @@ body {
   align-items: center;
   text-align: center;
   background: radial-gradient(circle at top, #1a1a2e, #0b0b0f);
+  overflow: hidden;
 }
+
+.bigross {
+  font-family: 'Poppins', sans-serif; /* نزدیک vibe Nothing Phone */
+  font-weight: 800;
+  font-size: 4rem;
+  color: #b026ff;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px #b026ff, 0 0 20px #39ff14;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #b026ff, 0 0 10px #39ff14; }
+  50% { text-shadow: 0 0 15px #b026ff, 0 0 25px #39ff14; }
+  100% { text-shadow: 0 0 5px #b026ff, 0 0 10px #39ff14; }
+}
+
+.typing-text {
+  color: #39ff14;
+  font-size: 1.3rem;
+  margin-top: 15px;
+  height: 1.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #39ff14;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
 
 .hero h1 {
   font-size: 4rem;
@@ -172,3 +191,97 @@ footer {
   z-index: -1;
   background: radial-gradient(circle at top, #1a1a2e, #0b0b0f);
 }
+
+/* Skills */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.skill-card {
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.skill-card span {
+  font-weight: 600;
+}
+
+.progress {
+  margin-top: 15px;
+  width: 100%;
+  height: 10px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #b026ff, #39ff14);
+  box-shadow: 0 0 15px rgba(176,38,255,0.7);
+  transition: width 1.5s ease;
+}
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.percent {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #39ff14;
+}
+.percent {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #39ff14;
+  transition: color 0.3s ease;
+}
+
+/* Cards (Interests Section) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  padding: 25px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 12px;
+  color: #b026ff;
+  transition: color 0.3s ease;
+}
+
+.card p {
+  font-weight: 600;
+  color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 30px rgba(176, 38, 255, 0.4);
+}
+
+.card:hover i {
+  color: #39ff14;
+}
+
