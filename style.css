@@ -1,0 +1,163 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0b0b0f;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Custom Cursor */
+.cursor {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #b026ff;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: 0.1s ease;
+  z-index: 999;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: radial-gradient(circle at top, #1a1a2e, #0b0b0f);
+}
+
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #b026ff;
+}
+
+.hero p {
+  color: #aaa;
+  margin-top: 15px;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  opacity: 0.6;
+}
+
+/* Sections */
+.section {
+  padding: 100px 10%;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #39ff14;
+}
+
+/* Glassmorphism Cards */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.card i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #b026ff;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 30px rgba(176, 38, 255, 0.4);
+}
+
+/* Contact */
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #141414;
+  border: none;
+  padding: 12px;
+  color: white;
+  border-radius: 10px;
+}
+
+.contact-form button {
+  background: #b026ff;
+  border: none;
+  padding: 12px;
+  color: black;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #39ff14;
+}
+
+/* Socials */
+.socials {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.socials a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #39ff14;
+}
+
+/* Footer */
+footer {
+  padding: 30px;
+  text-align: center;
+  color: #666;
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+}
